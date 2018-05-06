@@ -17,6 +17,18 @@
 		1EEBB8781FFFD52700EB33C3 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEBB8761FFFD4B500EB33C3 /* NetworkExtension.framework */; };
 		1EEBB8791FFFD8A700EB33C3 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEBB8761FFFD4B500EB33C3 /* NetworkExtension.framework */; };
 		1EF602951F113A660005E0C7 /* GeoLite2-Country.mmdb in Resources */ = {isa = PBXBuildFile; fileRef = 1EF602941F113A660005E0C7 /* GeoLite2-Country.mmdb */; };
+		274BFE1C209F7577009C0189 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BFDFF209F7577009C0189 /* Date.swift */; };
+		274BFE1D209F7577009C0189 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BFE00209F7577009C0189 /* Lexer.swift */; };
+		274BFE1E209F7577009C0189 /* Serialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BFE01209F7577009C0189 /* Serialize.swift */; };
+		274BFE1F209F7577009C0189 /* Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BFE02209F7577009C0189 /* Evaluator.swift */; };
+		274BFE20209F7577009C0189 /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BFE03209F7577009C0189 /* Tokens.swift */; };
+		274BFE21209F7577009C0189 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BFE04209F7577009C0189 /* Helpers.swift */; };
+		274BFE22209F7577009C0189 /* Toml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BFE05209F7577009C0189 /* Toml.swift */; };
+		274BFE23209F7577009C0189 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BFE06209F7577009C0189 /* Path.swift */; };
+		274BFE24209F7577009C0189 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BFE07209F7577009C0189 /* Regex.swift */; };
+		274BFE25209F7577009C0189 /* Grammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BFE08209F7577009C0189 /* Grammar.swift */; };
+		274BFE26209F7577009C0189 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BFE09209F7577009C0189 /* String.swift */; };
+		274BFE27209F7577009C0189 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BFE0A209F7577009C0189 /* Parser.swift */; };
 		3880684779850530AFBD4C88 /* Pods_PacketTunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A478ADBAAA1661B3FB51E4D3 /* Pods_PacketTunnel.framework */; };
 		3A104BCE2073C55D00C848D5 /* libsodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A104BB92073C4AB00C848D5 /* libsodium.framework */; };
 		3A104BCF2073C55D00C848D5 /* libuv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A104BC22073C4CD00C848D5 /* libuv.framework */; };
@@ -651,6 +663,18 @@
 		1EF602941F113A660005E0C7 /* GeoLite2-Country.mmdb */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeoLite2-Country.mmdb"; sourceTree = "<group>"; };
 		217DDEB43D39CFD980088F46 /* Pods-PotatsoModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PotatsoModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PotatsoModel/Pods-PotatsoModel.debug.xcconfig"; sourceTree = "<group>"; };
 		2589D04E6C48F30ED63BA84F /* Pods_PotatsoModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PotatsoModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		274BFDFF209F7577009C0189 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		274BFE00209F7577009C0189 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
+		274BFE01209F7577009C0189 /* Serialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serialize.swift; sourceTree = "<group>"; };
+		274BFE02209F7577009C0189 /* Evaluator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluator.swift; sourceTree = "<group>"; };
+		274BFE03209F7577009C0189 /* Tokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
+		274BFE04209F7577009C0189 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		274BFE05209F7577009C0189 /* Toml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toml.swift; sourceTree = "<group>"; };
+		274BFE06209F7577009C0189 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		274BFE07209F7577009C0189 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		274BFE08209F7577009C0189 /* Grammar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grammar.swift; sourceTree = "<group>"; };
+		274BFE09209F7577009C0189 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		274BFE0A209F7577009C0189 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		2AE5B01A5E9CF50CB9760E6E /* Pods-PacketTunnel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketTunnel.release.xcconfig"; path = "Pods/Target Support Files/Pods-PacketTunnel/Pods-PacketTunnel.release.xcconfig"; sourceTree = "<group>"; };
 		3A104BB32073C4AB00C848D5 /* libsodium.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libsodium.xcodeproj; path = Library/ssrNative/depends/libsodium/ios/libsodium.xcodeproj; sourceTree = SOURCE_ROOT; };
 		3A104BBC2073C4CD00C848D5 /* libuv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libuv.xcodeproj; path = Library/ssrNative/depends/libuv/ios/libuv.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -1353,6 +1377,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		274BFDFE209F7577009C0189 /* Toml */ = {
+			isa = PBXGroup;
+			children = (
+				274BFDFF209F7577009C0189 /* Date.swift */,
+				274BFE00209F7577009C0189 /* Lexer.swift */,
+				274BFE01209F7577009C0189 /* Serialize.swift */,
+				274BFE02209F7577009C0189 /* Evaluator.swift */,
+				274BFE03209F7577009C0189 /* Tokens.swift */,
+				274BFE04209F7577009C0189 /* Helpers.swift */,
+				274BFE05209F7577009C0189 /* Toml.swift */,
+				274BFE06209F7577009C0189 /* Path.swift */,
+				274BFE07209F7577009C0189 /* Regex.swift */,
+				274BFE08209F7577009C0189 /* Grammar.swift */,
+				274BFE09209F7577009C0189 /* String.swift */,
+				274BFE0A209F7577009C0189 /* Parser.swift */,
+			);
+			path = Toml;
+			sourceTree = "<group>";
+		};
 		360FC4CAA2A2878A46E847E5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1684,6 +1727,7 @@
 				9BC215CB1CB5E584002AADD1 /* Manager.swift */,
 				9BF3034C1CCA20D80096588E /* Logging.swift */,
 				9BC215C61CB51148002AADD1 /* Config.swift */,
+				274BFDFE209F7577009C0189 /* Toml */,
 				9BB3F73E1CC60B5300C2DD05 /* Image.swift */,
 				9B9B15C11C21595B000B6541 /* Info.plist */,
 				B82574A81D1D98CF007BAF40 /* Pollution.swift */,
@@ -3660,10 +3704,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BF3034D1CCA20D80096588E /* Logging.swift in Sources */,
+				274BFE1D209F7577009C0189 /* Lexer.swift in Sources */,
+				274BFE1E209F7577009C0189 /* Serialize.swift in Sources */,
+				274BFE24209F7577009C0189 /* Regex.swift in Sources */,
+				274BFE20209F7577009C0189 /* Tokens.swift in Sources */,
+				274BFE21209F7577009C0189 /* Helpers.swift in Sources */,
+				274BFE1C209F7577009C0189 /* Date.swift in Sources */,
 				9BC215CC1CB5E584002AADD1 /* Manager.swift in Sources */,
+				274BFE25209F7577009C0189 /* Grammar.swift in Sources */,
 				9BB3F7411CC60B5300C2DD05 /* Image.swift in Sources */,
 				B82574A91D1D98CF007BAF40 /* Pollution.swift in Sources */,
+				274BFE22209F7577009C0189 /* Toml.swift in Sources */,
+				274BFE23209F7577009C0189 /* Path.swift in Sources */,
 				9BC215C71CB51148002AADD1 /* Config.swift in Sources */,
+				274BFE26209F7577009C0189 /* String.swift in Sources */,
+				274BFE27209F7577009C0189 /* Parser.swift in Sources */,
+				274BFE1F209F7577009C0189 /* Evaluator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -113,3 +113,65 @@ open class Config {
     }
 
 }
+
+///custom modify: for toml
+extension Config {
+    public func setupToml(_ confStr: String) throws {
+        var proxiesConfig: [[String: AnyObject]] = []
+        
+        let toml = try Toml(withString: confStr)
+        for (_, table) in toml.tables("RULESET") {
+            if let name = table.string("name"),
+                name.count != 0,
+                let rules: [String] = table.array("rules"),
+                rules.count != 0 {
+                proxiesConfig.append(["name": name as AnyObject, "rules": rules as AnyObject])
+            }
+        }
+        
+        if !proxiesConfig.isEmpty {
+            realm.beginWrite()
+            try setupProxiesForToml()
+            try setupProxyRuleSetsForToml(proxiesConfig)
+            try setupConfigGroupsForToml()
+            try save()
+        }
+    }
+    
+    func setupProxiesForToml() throws {
+        //unimpelented
+//        if let proxiesConfig = configDict["proxies"] as? [[String: AnyObject]] {
+//            proxies = try proxiesConfig.map({ (config) -> Proxy? in
+//                return try Proxy(dictionary: config, inRealm: realm)
+//            }).filter { $0 != nil }.map { $0! }
+//            try proxies.forEach {
+//                try $0.validate(inRealm: realm)
+//                realm.add($0)
+//            }
+//        }
+    }
+    
+    func setupProxyRuleSetsForToml(_ proxiesConfig: [[String: AnyObject]]) throws {
+        ruleSets = try proxiesConfig.compactMap({ (config) -> ProxyRuleSet? in
+            return try ProxyRuleSet(dictionary: config, inRealm: realm)
+        })
+        try ruleSets.forEach {
+            try $0.validate(inRealm: realm)
+            realm.add($0)
+        }
+    }
+    
+    func setupConfigGroupsForToml() throws {
+        //unimpelented
+//        if let proxiesConfig = configDict["configGroups"] as? [[String: AnyObject]] {
+//            groups = try proxiesConfig.map({ (config) -> ConfigurationGroup? in
+//                return try ConfigurationGroup(dictionary: config, inRealm: realm)
+//            }).filter { $0 != nil }.map { $0! }
+//            try groups.forEach {
+//                try $0.validate(inRealm: realm)
+//                realm.add($0)
+//            }
+//        }
+    }
+    
+}

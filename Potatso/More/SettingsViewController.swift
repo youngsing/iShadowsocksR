@@ -81,6 +81,14 @@ class SettingsViewController: FormViewController, MFMailComposeViewControllerDel
                 let importer = Importer(vc: self)
                 importer.importConfigFromUrl()
             })
+            ///custom modify: for toml format config
+            <<< ActionRow() {
+                $0.title = "Import Config in Potatso 2 Format".localized()
+                
+                }.onCellSelection({ [unowned self] (cell, row) -> () in
+                    let importer = Importer(vc: self)
+                    importer.importTomlConfigFromUrl()
+                })
             <<< ActionRow() {
                 $0.title = "Import From QRCode".localized()
             }.onCellSelection({ [unowned self] (cell, row) -> () in

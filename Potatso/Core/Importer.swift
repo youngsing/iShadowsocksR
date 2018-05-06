@@ -132,3 +132,40 @@ struct Importer {
     }
 
 }
+
+///custom modify: for toml
+extension Importer {
+    func importTomlConfigFromUrl() {
+        var urlTextField: UITextField?
+        let alert = UIAlertController(title: "Import Config In Potatso 2 Format".localized(), message: nil, preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Input URL".localized()
+            urlTextField = textField
+        }
+        alert.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: { (action) in
+            if let input = urlTextField?.text, input.hasPrefix("http") {
+                self.importTomlConfig(input)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "CANCEL".localized(), style: .cancel, handler: nil))
+        viewController?.present(alert, animated: true, completion: nil)
+    }
+    
+    func importTomlConfig(_ source: String) {
+        viewController?.showProgreeHUD("Importing Config...".localized())
+        Async.background(after: 1) {
+            let config = Config()
+            do {
+                if let url = URL(string: source) {
+                    ///custom modify: remove for Windows
+                    let conf = try String(contentsOf: url).replacingOccurrences(of: "\r\n", with: "\n")
+                    try config.setupToml(conf)
+                }
+                self.onConfigSaveCallback(true, error: nil)
+            } catch {
+                self.onConfigSaveCallback(false, error: error)
+            }
+        }
+    }
+
+}
