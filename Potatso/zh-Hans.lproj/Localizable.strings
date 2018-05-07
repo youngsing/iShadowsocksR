@@ -64,8 +64,9 @@
 "Home" = "首页";
 "Host" = "服务器";
 "Host can't be empty" = "服务器不能为空";
-"Import Config From URL" = "从 URL 导入配置";
 "IP Rules Match" = "IP 规则匹配";
+"Import Config From URL" = "从 URL 导入配置";
+"Import Config In Potatso 2 Format" = "从 URL 导入Potatso 2配置";
 "Import From QRCode" = "从二维码导入";
 "Import From URL" = "从 URL 导入";
 "Import Success" = "导入成功";

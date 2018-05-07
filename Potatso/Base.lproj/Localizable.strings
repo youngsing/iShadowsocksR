@@ -4,6 +4,7 @@
 "qrcode.album" = "Album";
 
 
+"%d ms" = "%d ms";
 "%d rule" = "%d rule";
 "%d rules" = "%d rules";
 "Action" = "Action";
@@ -65,6 +66,7 @@
 "Host can't be empty" = "Host can't be empty";
 "IP Rules Match" = "IP Rules Match";
 "Import Config From URL" = "Import Config From URL";
+"Import Config In Potatso 2 Format" = "Import Config In Potatso 2 Format";
 "Import From QRCode" = "Import From QRCode";
 "Import From URL" = "Import From URL";
 "Import Success" = "Import Success";
